@@ -30,7 +30,7 @@ def calc_me(x=None,y=None, oper=None):
         return "ERROR: send me Number1"
     # если y не присвоили значение - возвращаем ошибку
     if y is None:
-        return "ERROR: send me Number2"
+        return "ERROR: send me Number1"
     # если x или y  не входит в типы int, float - возвращаем ошибку
     if (not isinstance(x, (int, float))) or (not isinstance(y, (int, float))):
         return "ERROR: now it is not supported"

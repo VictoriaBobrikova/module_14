@@ -53,10 +53,12 @@ class CalcTest(unittest.TestCase):
         "Запуск без переменной Число2"
         self.assertEqual(calc_me(2, None,'+'), 'ERROR: send me Number2')
 
+    # в документации отсуствует такой случай,надо добавить или и без него хорошо?
     def test_none_numb12(self):
         "Запуск без обеих переменных Число1 и Число2"
         self.assertEqual(calc_me(None, None,'+'), 'ERROR: send me Number1 and Number2')
 
+    # при запуске калькулятора из sublime он выводит такую ошибку, но тест почему-то считает
     def test_none(self):
         "Расчёт больших чисел"
         self.assertEqual(calc_me(3, 1000,'^'), 'Overflow error: Result is too large')
